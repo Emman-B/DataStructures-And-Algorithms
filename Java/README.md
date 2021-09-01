@@ -9,9 +9,9 @@ I used the IntelliJ (2021.2) IDE for code writing and compilation.
 I used JUnit (v5.7.0) for writing unit tests.
 
 ## Directory Structure
-All of the implementations are in the `src/com/github/emman_b/` directory.
+All of the implementations are in the `src/com/github/emman_b/` directory. There are separate directories for Data Structures and Algorithms.
 
-All of the tests are in the `test/com/github/emman_b`
+All of the tests are in the `test/com/github/emman_b`. This also contains separate directories for Data Structures and Algorithms.
 
 ## Usage (Running the Tests)
 

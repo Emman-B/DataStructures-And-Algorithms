@@ -1,4 +1,6 @@
-package com.github.emman_b;
+package com.github.emman_b.datastructures;
+
+import com.github.emman_b.Collections;
 
 public class Stack <T> extends Collections {
     // Fields

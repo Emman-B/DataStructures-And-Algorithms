@@ -1,6 +1,8 @@
-package com.github.emman_b;
+package com.github.emman_b.datastructures;
 
-public class Queue <T> extends Collections{
+import com.github.emman_b.Collections;
+
+public class Queue <T> extends Collections {
     // fields
     private DoublyLinkedList<T> data;
 

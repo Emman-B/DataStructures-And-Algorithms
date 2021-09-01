@@ -1,5 +1,6 @@
-package com.github.emman_b;
+package com.github.emman_b.datastructures;
 
+import com.github.emman_b.Collections;
 import jdk.jshell.spi.ExecutionControl;
 
 /**
@@ -7,7 +8,7 @@ import jdk.jshell.spi.ExecutionControl;
  * considered part of the list.
  * @param <T> data type of list
  */
-public class DoublyLinkedList <T> extends Collections{
+public class DoublyLinkedList <T> extends Collections {
     /**
      * Inner class for the nodes of the linked list
      */

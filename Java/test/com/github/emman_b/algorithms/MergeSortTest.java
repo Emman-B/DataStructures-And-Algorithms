@@ -1,5 +1,6 @@
-package com.github.emman_b;
+package com.github.emman_b.algorithms;
 
+import com.github.emman_b.algorithms.MergeSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,5 +1,6 @@
-package com.github.emman_b;
+package com.github.emman_b.datastructures;
 
+import com.github.emman_b.datastructures.Stack;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package com.github.emman_b;
+package com.github.emman_b.algorithms;
 
 public class MergeSort {
     public static void sort(Comparable[] data) {

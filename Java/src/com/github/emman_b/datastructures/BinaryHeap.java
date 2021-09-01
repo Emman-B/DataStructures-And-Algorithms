@@ -1,4 +1,4 @@
-package com.github.emman_b;
+package com.github.emman_b.datastructures;
 
 import java.util.ArrayList;
 

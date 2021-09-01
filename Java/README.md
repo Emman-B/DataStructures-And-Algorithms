@@ -1,12 +1,12 @@
 # Java (DSA)
 This contains Data Structures and Algorithms implemented in Java.
 
-I used an IDE (IntelliJ) for these implementations, which is why the directory structure looks strange.
+This was taken from my original repository: <https://github.com/Emman-B/DSA-Java/>. You can review the commit messages from that repository if necessary.
 
 ## Technologies Used
-I used JUnit (v5.7.0) for writing unit tests.
-
 I used the IntelliJ (2021.2) IDE for code writing and compilation.
+
+I used JUnit (v5.7.0) for writing unit tests.
 
 ## Directory Structure
 All of the implementations are in the `src/com/github/emman_b/` directory.

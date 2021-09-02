@@ -1,6 +1,4 @@
 // Closures
-
-// This function is a closure
 const makeAdd = (num) => {
     return function(val) {
         return num + val;

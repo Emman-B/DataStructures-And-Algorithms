@@ -44,6 +44,10 @@ SinglyLinkedList.prototype.get = function(index) {
     }
 }
 
+/**
+ * appends data to the end of the list
+ * @param {object} data data to insert into the end of the list
+ */
 SinglyLinkedList.prototype.add = function(data) {
     // case: insert into empty list
     if (this.head === undefined) {
@@ -61,6 +65,10 @@ SinglyLinkedList.prototype.add = function(data) {
     iterator.next = new Node(data);
 }
 
+/**
+ * removes an item at an index
+ * @param {number} index index of item to remove
+ */
 SinglyLinkedList.prototype.remove = function(index) {
     // case: invalid negative index
     if (index < 0) {
@@ -92,7 +100,24 @@ SinglyLinkedList.prototype.remove = function(index) {
         iterator.next = iterator.next.next;
         return removedData;
     }
+}
 
+/**
+ * calculates the size of the list
+ * @returns size of list
+ */
+SinglyLinkedList.prototype.size = function() {
+    if (this.head == null) return 0;
+
+    let iterator = this.head;
+    let size = 1;
+
+    while (iterator.next != null) {
+        iterator = iterator.next;
+        ++size;
+    }
+
+    return size;
 }
 
 

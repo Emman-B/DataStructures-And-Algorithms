@@ -10,6 +10,8 @@
         }
     
     The idea is to turn this multi-level DLL into a flat, single-level DLL.
+    This single level will contain all of the nodes from the lower levels,
+    appended to the end of the first level
 */
 
 // Data structure to use
@@ -40,6 +42,7 @@ function flattenList(head) {
     // now that we have the levelorder traversal, append it to the last item
     levelorderTraversal.forEach((element) => {
         lastElement.next = element;
+        element.prev = lastElement;
         lastElement = lastElement.next;
     });
 }
@@ -101,10 +104,6 @@ function levelorderTraverse(root) {
     // result should now have the level-order traversal
     return result;
 }
-
-test('Placeholder test (until actual tests can be written)', () => {
-    expect('Hello World').toBe('Hello World');
-});
 
 test('Main Flatten List Test', () => {
     // Setup the test

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CTCI_1_02_CheckPermutation {
     /*
-        Check two strings and verify if one is a permutation of the other.
+        Problem: Check two strings and verify if one is a permutation of the other.
 
         Assumptions: case does not matter, whitespace does matter
      */

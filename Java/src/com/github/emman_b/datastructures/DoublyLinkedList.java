@@ -12,6 +12,7 @@ public class DoublyLinkedList <T> extends Collections {
     /**
      * Inner class for the nodes of the linked list
      */
+    /*
     class ListNode {
         // Fields
         T data;         // data to be stored in node
@@ -24,17 +25,17 @@ public class DoublyLinkedList <T> extends Collections {
         ListNode(T data) {
             this.data = data;
         }
-    }
+    }*/
 
     // Fields
-    private final ListNode head;
-    private final ListNode tail;
+    private final ListNode<T> head;
+    private final ListNode<T> tail;
 
     // Constructors
     DoublyLinkedList() {
         // initialize the head and tail
-        head = new ListNode();
-        tail = new ListNode();
+        head = new ListNode<>();
+        tail = new ListNode<>();
 
         // let them point to each other
         head.next = tail;
@@ -49,7 +50,7 @@ public class DoublyLinkedList <T> extends Collections {
      */
     public int size() {
         // iterate through list
-        ListNode iterator = head.next;
+        ListNode<T> iterator = head.next;
 
         // loop while maintaining count of elements
         int count = 0;
@@ -74,7 +75,7 @@ public class DoublyLinkedList <T> extends Collections {
         }
 
         // then, loop through the list using a ListNode as an iterator
-        ListNode current = head.next;
+        ListNode<T> current = head.next;
         Object[] result = new Object[size()];
         int index = 0;
         while (current != tail) {
@@ -110,12 +111,12 @@ public class DoublyLinkedList <T> extends Collections {
      * @param index the index of the item
      * @return the item at the index
      */
-    private ListNode getNodeStartingAtHead(int index) {
+    private ListNode<T> getNodeStartingAtHead(int index) {
         // validate index
         validateIndex(index, size());
 
         // make an iterator and store an index
-        ListNode iterator = head;
+        ListNode<T> iterator = head;
         int currentIndex = -1;
 
         // loop through until the index is reached
@@ -134,12 +135,12 @@ public class DoublyLinkedList <T> extends Collections {
      * @param index the index of the item
      * @return the item at the index
      */
-    private ListNode getNodeStartingAtTail(int index) {
+    private ListNode<T> getNodeStartingAtTail(int index) {
         // validate index
         validateIndex(index, size());
 
         // make an iterator and store an index
-        ListNode iterator = tail;
+        ListNode<T> iterator = tail;
         int currentIndex = size();
 
         // loop through until the index is reached
@@ -184,7 +185,7 @@ public class DoublyLinkedList <T> extends Collections {
         validateIndex(index, size() + 1);
 
         // create an iterator and keep track of the index
-        ListNode iterator = head;
+        ListNode<T> iterator = head;
         int currentIndex = -1;
 
         // loop until the index is reached
@@ -195,7 +196,7 @@ public class DoublyLinkedList <T> extends Collections {
 
         // so now the iterator is at the index
         // Make a new node to insert
-        ListNode newNode = new ListNode(item);
+        ListNode<T> newNode = new ListNode<>(item);
 
         // insert it into the list
         newNode.prev = iterator.prev;
@@ -214,7 +215,7 @@ public class DoublyLinkedList <T> extends Collections {
         validateIndex(index, size() + 1);
 
         // create an iterator and keep track of the index
-        ListNode iterator = tail;
+        ListNode<T> iterator = tail;
         int currentIndex = size();
 
         // loop until 1 under the index is reached
@@ -225,7 +226,7 @@ public class DoublyLinkedList <T> extends Collections {
 
         // so now the iterator is at the index
         // Make a new node to insert
-        ListNode newNode = new ListNode(item);
+        ListNode<T> newNode = new ListNode<>(item);
 
         // insert it into the list
         newNode.prev = iterator;
@@ -247,7 +248,7 @@ public class DoublyLinkedList <T> extends Collections {
         boolean startAtHead = (index < (size() + 1) / 2);
 
         // get the node that we need to remove
-        ListNode nodeToRemove = null;
+        ListNode<T> nodeToRemove = null;
         if (startAtHead) {
             nodeToRemove = getNodeStartingAtHead(index);
         }
